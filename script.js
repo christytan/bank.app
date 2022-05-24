@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -6,127 +6,127 @@
 
 // Data
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: "Jonas Schmedtmann",
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2022-05-08T14:11:59.604Z',
-    '2022-05-16T17:01:17.194Z',
-    '2022-05-21T23:36:17.929Z',
-    '2022-05-22T10:51:36.790Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2022-05-08T14:11:59.604Z",
+    "2022-05-16T17:01:17.194Z",
+    "2022-05-21T23:36:17.929Z",
+    "2022-05-22T10:51:36.790Z",
   ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  currency: "EUR",
+  locale: "pt-PT", // de-DE
 };
 
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: "Jessica Davis",
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
   movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2022-05-18T14:18:46.235Z',
-    '2022-05-19T16:33:06.386Z',
-    '2022-05-20T14:43:26.374Z',
-    '2022-05-22T10:49:59.371Z',
-    '2022-05-22T12:01:20.894Z',
+    "2019-11-01T13:15:33.035Z",
+    "2019-11-30T09:48:16.867Z",
+    "2019-12-25T06:04:23.907Z",
+    "2022-05-18T14:18:46.235Z",
+    "2022-05-19T16:33:06.386Z",
+    "2022-05-20T14:43:26.374Z",
+    "2022-05-22T10:49:59.371Z",
+    "2022-05-22T12:01:20.894Z",
   ],
-  currency: 'USD',
-  locale: 'en-US',
+  currency: "USD",
+  locale: "en-US",
 };
 
 const account3 = {
-  owner: 'Steven Thomas Williams',
+  owner: "Steven Thomas Williams",
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
   pin: 3333,
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2022-05-08T14:11:59.604Z',
-    '2022-05-16T17:01:17.194Z',
-    '2022-05-21T23:36:17.929Z',
-    '2022-05-22T10:51:36.790Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2022-05-08T14:11:59.604Z",
+    "2022-05-16T17:01:17.194Z",
+    "2022-05-21T23:36:17.929Z",
+    "2022-05-22T10:51:36.790Z",
   ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  currency: "EUR",
+  locale: "pt-PT", // de-DE
 };
 
 const account4 = {
-  owner: 'Sarah Smith',
+  owner: "Sarah Smith",
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
   pin: 4444,
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2022-05-08T14:11:59.604Z',
-    '2022-05-16T17:01:17.194Z',
-    '2022-05-21T23:36:17.929Z',
-    '2022-05-22T10:51:36.790Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2022-05-08T14:11:59.604Z",
+    "2022-05-16T17:01:17.194Z",
+    "2022-05-21T23:36:17.929Z",
+    "2022-05-22T10:51:36.790Z",
   ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  currency: "EUR",
+  locale: "pt-PT", // de-DE
 };
 
 const accounts = [account1, account2, account3, account4];
 
 // Elements
-const labelWelcome = document.querySelector('.welcome');
-const labelDate = document.querySelector('.date');
-const labelBalance = document.querySelector('.balance__value');
-const labelSumIn = document.querySelector('.summary__value--in');
-const labelSumOut = document.querySelector('.summary__value--out');
-const labelSumInterest = document.querySelector('.summary__value--interest');
-const labelTimer = document.querySelector('.timer');
+const labelWelcome = document.querySelector(".welcome");
+const labelDate = document.querySelector(".date");
+const labelBalance = document.querySelector(".balance__value");
+const labelSumIn = document.querySelector(".summary__value--in");
+const labelSumOut = document.querySelector(".summary__value--out");
+const labelSumInterest = document.querySelector(".summary__value--interest");
+const labelTimer = document.querySelector(".timer");
 
-const containerApp = document.querySelector('.app');
-const containerMovements = document.querySelector('.movements');
+const containerApp = document.querySelector(".app");
+const containerMovements = document.querySelector(".movements");
 
-const btnLogin = document.querySelector('.login__btn');
-const btnTransfer = document.querySelector('.form__btn--transfer');
-const btnLoan = document.querySelector('.form__btn--loan');
-const btnClose = document.querySelector('.form__btn--close');
-const btnSort = document.querySelector('.btn--sort');
+const btnLogin = document.querySelector(".login__btn");
+const btnTransfer = document.querySelector(".form__btn--transfer");
+const btnLoan = document.querySelector(".form__btn--loan");
+const btnClose = document.querySelector(".form__btn--close");
+const btnSort = document.querySelector(".btn--sort");
 
-const inputLoginUsername = document.querySelector('.login__input--user');
-const inputLoginPin = document.querySelector('.login__input--pin');
-const inputTransferTo = document.querySelector('.form__input--to');
-const inputTransferAmount = document.querySelector('.form__input--amount');
-const inputLoanAmount = document.querySelector('.form__input--loan-amount');
-const inputCloseUsername = document.querySelector('.form__input--user');
-const inputClosePin = document.querySelector('.form__input--pin');
+const inputLoginUsername = document.querySelector(".login__input--user");
+const inputLoginPin = document.querySelector(".login__input--pin");
+const inputTransferTo = document.querySelector(".form__input--to");
+const inputTransferAmount = document.querySelector(".form__input--amount");
+const inputLoanAmount = document.querySelector(".form__input--loan-amount");
+const inputCloseUsername = document.querySelector(".form__input--user");
+const inputClosePin = document.querySelector(".form__input--pin");
 
 let currAccount;
 let isSort = false;
 let timer;
 /* HELPER function */
 function createUserName() {
-  accounts.forEach(acc => {
+  accounts.forEach((acc) => {
     acc.username = acc.owner
       .toLowerCase()
-      .split(' ')
-      .map(each => each[0])
-      .join('');
+      .split(" ")
+      .map((each) => each[0])
+      .join("");
   });
 }
 
 function createMovDates() {
-  accounts.forEach(acc => {
+  accounts.forEach((acc) => {
     //apply movements__date into the containerMovements
-    acc.movDates = acc.movementsDates.map(date =>
+    acc.movDates = acc.movementsDates.map((date) =>
       new Intl.DateTimeFormat(acc.locale).format(new Date(date))
     );
   });
@@ -144,7 +144,7 @@ class movObj {
 
 function createMovTimeObj() {
   accounts.forEach(
-    acc =>
+    (acc) =>
       (acc.pair = acc.movements.map(
         (mov, i) => new movObj(mov, acc.movDates[i])
       ))
@@ -156,8 +156,6 @@ function initial() {
   createUserName();
   createMovDates();
   createMovTimeObj();
-
-  containerApp.style.opacity = 1;
 }
 
 initial();
@@ -171,7 +169,7 @@ function login() {
   const username = inputLoginUsername.value;
   const pin = inputLoginPin.value;
 
-  accounts.forEach(acc => {
+  accounts.forEach((acc) => {
     if (acc.username === username && +pin === acc.pin) {
       containerApp.style.opacity = 1;
       labelWelcome.textContent = `Welcome ${acc.owner}`;
@@ -180,8 +178,8 @@ function login() {
   });
 
   //clear the input
-  inputLoginUsername.value = '';
-  inputLoginPin.value = '';
+  inputLoginUsername.value = "";
+  inputLoginPin.value = "";
 
   displayMovements(currAccount);
   displayBalance(currAccount);
@@ -191,7 +189,7 @@ function login() {
 /* DISPLAY MOVEMENTS */
 function displayMovements(acc, isSort) {
   //clear the input on the previous account
-  containerMovements.textContent = '';
+  containerMovements.textContent = "";
 
   /* SORT */
   // const mov = isSort
@@ -203,7 +201,7 @@ function displayMovements(acc, isSort) {
 
   //acc.movements loop, [divString, divstring.....] -> string -> insert html
   movObj.map((movObj, i) => {
-    const inout = movObj.mov > 0 ? 'deposit' : 'withdrawal';
+    const inout = movObj.mov > 0 ? "deposit" : "withdrawal";
     const html = ` 
         <div class="movements__row">
           <div class="movements__type movements__type--${inout}">${i} ${inout}</div>
@@ -211,7 +209,7 @@ function displayMovements(acc, isSort) {
           <div class="movements__value">${Math.abs(movObj.mov)} €</div>
         </div>`;
 
-    containerMovements.insertAdjacentHTML('afterbegin', html);
+    containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 }
 
@@ -225,16 +223,16 @@ function displayBalance(acc) {
 function displaySummary(acc) {
   //in
   labelSumIn.textContent = `${acc.movements
-    .filter(mov => mov > 0)
+    .filter((mov) => mov > 0)
     .reduce((prev, mov) => prev + mov, 0)} €`;
   //out
   labelSumOut.textContent = `${-acc.movements
-    .filter(mov => mov < 0)
+    .filter((mov) => mov < 0)
     .reduce((prev, mov) => prev + mov, 0)} €`;
   //interest
   labelSumInterest.textContent = `${acc.movements
-    .filter(mov => mov > 0)
-    .map(deposit => (deposit * acc.interestRate) / 100)
+    .filter((mov) => mov > 0)
+    .map((deposit) => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
       return int >= 1;
     })
@@ -248,10 +246,10 @@ function transferMoney() {
 
   const transferTo = inputTransferTo.value;
   const transferAmount = inputTransferAmount.value;
-  console.log(accounts.find(acc => acc.username === transferTo));
+  console.log(accounts.find((acc) => acc.username === transferTo));
 
-  if (accounts.find(acc => acc.username === transferTo)) {
-    const transferAcc = accounts.find(acc => acc.username === transferTo);
+  if (accounts.find((acc) => acc.username === transferTo)) {
+    const transferAcc = accounts.find((acc) => acc.username === transferTo);
     transferAcc.movements.push(+transferAmount);
     transferAcc.pair.push(
       new movObj(
@@ -270,8 +268,8 @@ function transferMoney() {
     );
   }
 
-  inputTransferTo.value = '';
-  inputTransferAmount.value = '';
+  inputTransferTo.value = "";
+  inputTransferAmount.value = "";
 }
 /* REQUEST LOAN */
 function requestLoan() {
@@ -296,7 +294,7 @@ function requestLoan() {
     displayMovements(currAccount);
     displaySummary(currAccount);
 
-    inputLoanAmount.value = '';
+    inputLoanAmount.value = "";
   }
   // console.log(currAccount);
 }
@@ -311,10 +309,10 @@ function closeAccount() {
   console.log(username, pin);
   if (currAccount.username === username && currAccount.pin === pin) {
     containerApp.style.opacity = 0;
-    labelWelcome.textContent = 'Log in to get started';
+    labelWelcome.textContent = "Log in to get started";
 
-    inputClosePin.value = '';
-    inputCloseUsername.value = '';
+    inputClosePin.value = "";
+    inputCloseUsername.value = "";
     //remove curraccount from accounts
     accounts.splice(accounts.indexOf(currAccount), 1);
   }
@@ -328,18 +326,18 @@ function timeOut() {
     let seconds = parseInt(time % 60, 10);
     let minutes = parseInt(time / 60);
 
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
     // let minutes = String(parseInt(time / 60, 10)).padStart(2, '0');
     // let seconds = String(parseInt(time % 60, 10)).padStart(2, '0');
 
-    labelTimer.textContent = minutes + ':' + seconds;
+    labelTimer.textContent = minutes + ":" + seconds;
 
     if (time === 0) {
       clearInterval(timer);
       containerApp.style.opacity = 0;
-      labelWelcome.textContent = 'Log in to get started';
+      labelWelcome.textContent = "Log in to get started";
     }
     time -= 1;
   }
@@ -388,30 +386,30 @@ function timeOut() {
 // };
 
 ///EVENT HANDLER
-btnLogin.addEventListener('click', function (e) {
+btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
   login();
 });
 
-btnSort.addEventListener('click', function (e) {
+btnSort.addEventListener("click", function (e) {
   e.preventDefault();
   // console.log('isSort', isSort);
   isSort = !isSort;
   displayMovements(currAccount, isSort);
 });
 
-btnTransfer.addEventListener('click', function (e) {
+btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
   transferMoney();
   displayMovements(currAccount, false);
   displayBalance(currAccount);
   displaySummary(currAccount);
 });
-btnLoan.addEventListener('click', function (e) {
+btnLoan.addEventListener("click", function (e) {
   e.preventDefault();
   requestLoan();
 });
-btnClose.addEventListener('click', function (e) {
+btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   closeAccount();
 });
