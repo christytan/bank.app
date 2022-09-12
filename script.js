@@ -63,10 +63,10 @@ const account3 = {
 };
 
 const account4 = {
-  owner: "Sarah Smith",
+  owner: "Christy Tan",
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
-  pin: 4444,
+  pin: 6666,
   movementsDates: [
     "2019-11-18T21:31:17.178Z",
     "2019-12-23T07:42:02.383Z",
